@@ -10,8 +10,22 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
-// import path from 'path'
+import { resolve } from "path";
 import vue from '@vitejs/plugin-vue'
+
+
+
+
+// 路径查找
+const pathResolve = (dir: string): string => {
+  return resolve(__dirname, ".", dir);
+};
+
+// 设置别名
+const alias: Record<string, string> = {
+  "/@": pathResolve("src"),
+  "@build": pathResolve("build")
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -34,5 +48,8 @@ export default defineConfig({
         javascriptEnabled: true,
       },
     },
+  },
+  resolve: {
+    alias
   }
 })
