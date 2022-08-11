@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @Author: 段振宇
+ * @version: 
+ * @Date: 2022-08-09 11:37:14
+ * @LastEditors: 段振宇
+-->
 <template>
   <el-config-provider :locale="currentLocale">
     <router-view />
@@ -22,3 +29,4 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="less" scoped></style>
