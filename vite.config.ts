@@ -24,7 +24,8 @@ const pathResolve = (dir: string): string => {
 // 设置别名
 const alias: Record<string, string> = {
   "/@": pathResolve("src"),
-  "@build": pathResolve("build")
+  "@build": pathResolve("build"),
+  "/@/style": pathResolve("src/style"),
 };
 
 // https://vitejs.dev/config/
