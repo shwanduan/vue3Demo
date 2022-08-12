@@ -22,7 +22,7 @@ import studentStatusQuery from '/@/views/studentStatusQuery.vue';
 
 // 2. 定义路由配置
 const routes = [
-  { path: '/', redirect: '/xfFile' },
+  { path: '/', redirect: '/studentStatusQuery' },
   { path: '/xfFile', name: 'xfFile', component: xfFile },
   { path: '/studentStatusQuery', name: 'studentStatusQuery', component: studentStatusQuery },
 ];

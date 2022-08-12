@@ -11,11 +11,9 @@ import '/@/style/index.less'
 import App from './App.vue'
 import router from './router'
 import Vconsole from 'vconsole'
+import 'lib-flexible'
 if (import.meta.env.VITE_APP_MODE == 'development') {
-  console.log(import.meta.env.VITE_APP_MODE, 'development')
   new Vconsole()
-} else {
-  console.log(import.meta.env.VITE_APP_MODE, 'pro')
 }
 const app = createApp(App)
 app.use(router)
